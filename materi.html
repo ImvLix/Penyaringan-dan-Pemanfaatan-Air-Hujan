@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f5efff">
+<title>Materi | Penyaringan dan Pemanfaatan Air Hujan</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {theme:{extend:{fontFamily:{display:['Trebuchet MS','sans-serif'],body:['Nunito','Arial','sans-serif']},colors:{lilac:'#a78bfa',plum:'#6d28d9',lavender:'#ede9fe',ink:'#34264d',mint:'#d9f5ec'}}}};
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:Nunito,Arial,sans-serif;background:#fbf9ff;color:#34264d}
+h1,h2,h3,.brand{font-family:Quicksand,Trebuchet MS,sans-serif}
+.panel{background:white;border:1px solid #eee7fb;border-radius:22px;box-shadow:0 8px 28px rgba(109,40,217,.07)}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:14px;padding:11px 17px;font-weight:800;background:#7c3aed;color:white;transition:.2s}
+.btn:hover{background:#6d28d9;transform:translateY(-1px)}
+.btn-soft{background:#ede9fe;color:#5b21b6}
+.btn-soft:hover{background:#ddd6fe}
+.navlink{padding:9px 12px;border-radius:12px;font-weight:800;color:#6b5a83}
+.navlink.active,.navlink:hover{background:#ede9fe;color:#5b21b6}
+.pill{display:inline-block;border-radius:999px;background:#f1eafe;color:#6d28d9;padding:5px 11px;font-size:12px;font-weight:800}
+.diagram{background:linear-gradient(135deg,#f4efff,#e8f8f4);border-radius:18px;padding:18px}
+.step{border:2px solid #e9ddff;border-radius:14px;padding:12px;text-align:center;background:white}
+input,select{accent-color:#7c3aed}
+@media(max-width:640px){.navlink{font-size:12px;padding:8px 7px}}
+</style>
+</head>
+<body>
+<header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-purple-100">
+ <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3">
+  <div class="flex items-center justify-between">
+   <a href="index.html" class="brand text-xl sm:text-2xl font-extrabold text-purple-700">💧 Penyaringan dan Pemanfaatan Air Hujan</a>
+   <span class="pill">Belajar teknologi air</span>
+  </div>
+  <nav class="flex flex-wrap gap-1 sm:gap-2">
+   <a class="navlink " href="index.html">Beranda</a>
+   <a class="navlink active" href="materi.html">Materi</a>
+   <a class="navlink " href="simulasi.html">Simulasi</a>
+   <a class="navlink " href="game.html">Game</a>
+   <a class="navlink " href="kuis.html">Kuis</a>
+  </nav>
+ </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+
+<section class="mb-8"><span class="pill">Halaman 2 · Bahan belajar</span><h1 class="text-4xl font-extrabold text-purple-800 mt-3">Materi Teknologi Air</h1><p class="mt-3 text-purple-900/70 max-w-3xl">Air bersih mendukung kesehatan, kegiatan rumah tangga, pendidikan, dan lingkungan. Dua teknologi berikut membantu mengelola sumber air secara lebih bijak.</p></section>
+<section class="panel p-5 sm:p-7 mb-7">
+ <h2 class="text-2xl font-extrabold text-purple-800">1. Mengapa air bersih penting?</h2>
+ <p class="mt-3 leading-relaxed">Air bersih digunakan untuk minum setelah memenuhi standar pengolahan, memasak, mandi, mencuci, sanitasi, dan kegiatan sekolah. Sumber air dapat tercemar oleh sampah, limbah rumah tangga, bahan kimia, mikroorganisme, serta limpasan dari area pertanian dan industri.</p>
+ <div class="grid sm:grid-cols-3 gap-3 mt-5">
+  <div class="bg-purple-50 rounded-xl p-4"><div class="text-3xl">🚰</div><b>Kebutuhan harian</b><p class="text-sm mt-1">Memasak, mandi, mencuci, dan sanitasi.</p></div>
+  <div class="bg-emerald-50 rounded-xl p-4"><div class="text-3xl">🌱</div><b>Lingkungan</b><p class="text-sm mt-1">Mendukung tumbuhan dan ekosistem.</p></div>
+  <div class="bg-sky-50 rounded-xl p-4"><div class="text-3xl">🏫</div><b>Pendidikan</b><p class="text-sm mt-1">Menjaga kebersihan dan kenyamanan sekolah.</p></div>
+ </div>
+</section>
+<section id="filter" class="panel p-5 sm:p-7 mb-7">
+ <span class="pill">Teknologi 1</span><h2 class="text-2xl font-extrabold text-purple-800 mt-2">Water Filter, Penyaringan Air</h2>
+ <p class="mt-3 leading-relaxed">Penyaringan air adalah proses melewatkan air melalui media berpori untuk menahan sebagian partikel dan kotoran. Filter sederhana dapat mengurangi kekeruhan, tetapi tidak otomatis menghilangkan semua kuman, virus, atau zat kimia terlarut. Air hasil demonstrasi tidak boleh langsung diminum.</p>
+ <div class="diagram mt-5">
+  <h3 class="font-extrabold text-center mb-4">Contoh susunan media dalam botol terbalik</h3>
+  <div class="max-w-xs mx-auto">
+   <div class="step bg-white">Kapas atau kain bersih</div><div class="text-center text-purple-500">↓</div>
+   <div class="step bg-amber-50">Arang aktif</div><div class="text-center text-purple-500">↓</div>
+   <div class="step bg-yellow-50">Pasir bersih</div><div class="text-center text-purple-500">↓</div>
+   <div class="step bg-stone-100">Kerikil</div><div class="text-center text-purple-500">↓</div>
+   <div class="text-center font-extrabold text-sky-700">Air tersaring keluar</div>
+  </div>
+  <p class="text-xs text-center text-purple-600 mt-3">Ilustrasi susunan demonstrasi. Desain filter nyata bergantung pada ukuran media, aliran, dan tujuan pengolahan.</p>
+ </div>
+ <div class="grid sm:grid-cols-2 gap-4 mt-5">
+  <div><h3 class="font-extrabold text-purple-800">Fungsi bahan</h3><ul class="list-disc pl-5 mt-2 space-y-2 text-sm"><li><b>Kerikil:</b> menahan kotoran berukuran besar dan membantu distribusi aliran.</li><li><b>Pasir:</b> menahan partikel halus penyebab kekeruhan.</li><li><b>Arang aktif:</b> mengadsorpsi sebagian senyawa penyebab bau, warna, atau rasa.</li><li><b>Kapas/kain:</b> menahan partikel kecil agar media tidak ikut terbawa.</li></ul></div>
+  <div><h3 class="font-extrabold text-purple-800">Tahapan kerja</h3><ol class="list-decimal pl-5 mt-2 space-y-2 text-sm"><li>Siapkan wadah filter dan media yang bersih.</li><li>Susun media sesuai rancangan.</li><li>Tuangkan air perlahan.</li><li>Amati perubahan warna dan kekeruhan.</li><li>Catat hasil dan bandingkan sebelum serta sesudah penyaringan.</li></ol></div>
+ </div>
+ <div class="bg-amber-50 rounded-xl p-4 mt-5 text-sm"><b>Ingat:</b> air yang tampak jernih belum tentu aman diminum. Pengolahan air minum memerlukan proses lanjutan dan pengujian kualitas.</div>
+</section>
+<section id="hujan" class="panel p-5 sm:p-7 mb-7">
+ <span class="pill">Teknologi 2</span><h2 class="text-2xl font-extrabold text-purple-800 mt-2">Rainwater Harvesting, Pemanenan Air Hujan</h2>
+ <p class="mt-3 leading-relaxed">Pemanenan air hujan adalah kegiatan mengumpulkan air hujan dari permukaan atap atau area tangkapan, mengalirkannya melalui talang dan pipa, melakukan penyaringan awal, lalu menyimpannya di tangki.</p>
+ <div class="diagram mt-5">
+  <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 items-center text-sm">
+   <div class="step"><div class="text-2xl">🏠</div><b>Atap</b><p>Menangkap hujan</p></div><div class="step"><div class="text-2xl">〰️</div><b>Talang</b><p>Mengumpulkan aliran</p></div><div class="step"><div class="text-2xl">🧰</div><b>Pipa</b><p>Mengalirkan air</p></div><div class="step"><div class="text-2xl">🧹</div><b>Filter</b><p>Menahan daun dan kotoran</p></div><div class="step"><div class="text-2xl">🛢️</div><b>Tangki</b><p>Menyimpan air</p></div>
+  </div>
+ </div>
+ <div class="grid sm:grid-cols-2 gap-4 mt-5">
+  <div><h3 class="font-extrabold text-purple-800">Komponen penting</h3><ul class="list-disc pl-5 mt-2 space-y-2 text-sm"><li>Atap sebagai bidang tangkapan air.</li><li>Talang dan pipa untuk mengalirkan air.</li><li>First flush untuk membuang aliran awal yang membawa banyak debu dan kotoran.</li><li>Saringan untuk menahan daun dan partikel.</li><li>Tangki tertutup untuk menyimpan air.</li></ul></div>
+  <div><h3 class="font-extrabold text-purple-800">Manfaat dan penggunaan</h3><ul class="list-disc pl-5 mt-2 space-y-2 text-sm"><li>Mengurangi penggunaan air bersih untuk kegiatan tertentu.</li><li>Menyediakan air untuk menyiram tanaman dan membersihkan halaman.</li><li>Membantu mengurangi limpasan air hujan.</li><li>Menjadi sarana belajar konservasi air di sekolah.</li></ul></div>
+ </div>
+ <div class="bg-sky-50 rounded-xl p-4 mt-5"><b>Rumus perkiraan volume:</b> Volume (liter) = Curah hujan (mm) × Luas atap (m²) × Efisiensi. Efisiensi ditulis dalam bentuk desimal. Contoh: 50 mm × 60 m² × 0,8 = 2.400 liter.</div>
+</section>
+<section class="panel p-5"><h2 class="text-xl font-extrabold text-purple-800">Sumber belajar yang disarankan</h2><ul class="list-disc pl-5 mt-3 text-sm space-y-2"><li>WHO, Guidelines for Drinking-water Quality.</li><li>UNEP, materi pengelolaan air hujan dan konservasi air.</li><li>Modul atau buku IPA dan Informatika yang membahas lingkungan serta teknologi sederhana.</li></ul><p class="text-xs text-purple-500 mt-3">Tambahkan tautan sumber resmi yang benar-benar kamu gunakan dalam penyusunan tugas.</p></section>
+
+</main>
+<footer class="mt-10 border-t border-purple-100 bg-white">
+ <div class="max-w-6xl mx-auto px-4 py-6 text-center text-sm text-purple-500">
+  Penyaringan dan Pemanfaatan Air Hujan · Kenali Teknologi Air, Jaga Masa Depan
+ </div>
+</footer>
+</body></html>

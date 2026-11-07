@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f5efff">
+<title>Kuis | Penyaringan dan Pemanfaatan Air Hujan</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {theme:{extend:{fontFamily:{display:['Trebuchet MS','sans-serif'],body:['Nunito','Arial','sans-serif']},colors:{lilac:'#a78bfa',plum:'#6d28d9',lavender:'#ede9fe',ink:'#34264d',mint:'#d9f5ec'}}}};
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:Nunito,Arial,sans-serif;background:#fbf9ff;color:#34264d}
+h1,h2,h3,.brand{font-family:Quicksand,Trebuchet MS,sans-serif}
+.panel{background:white;border:1px solid #eee7fb;border-radius:22px;box-shadow:0 8px 28px rgba(109,40,217,.07)}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:14px;padding:11px 17px;font-weight:800;background:#7c3aed;color:white;transition:.2s}
+.btn:hover{background:#6d28d9;transform:translateY(-1px)}
+.btn-soft{background:#ede9fe;color:#5b21b6}
+.btn-soft:hover{background:#ddd6fe}
+.navlink{padding:9px 12px;border-radius:12px;font-weight:800;color:#6b5a83}
+.navlink.active,.navlink:hover{background:#ede9fe;color:#5b21b6}
+.pill{display:inline-block;border-radius:999px;background:#f1eafe;color:#6d28d9;padding:5px 11px;font-size:12px;font-weight:800}
+.diagram{background:linear-gradient(135deg,#f4efff,#e8f8f4);border-radius:18px;padding:18px}
+.step{border:2px solid #e9ddff;border-radius:14px;padding:12px;text-align:center;background:white}
+input,select{accent-color:#7c3aed}
+@media(max-width:640px){.navlink{font-size:12px;padding:8px 7px}}
+</style>
+</head>
+<body>
+<header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-purple-100">
+ <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3">
+  <div class="flex items-center justify-between">
+   <a href="index.html" class="brand text-xl sm:text-2xl font-extrabold text-purple-700">💧 Penyaringan dan Pemanfaatan Air Hujan</a>
+   <span class="pill">Belajar teknologi air</span>
+  </div>
+  <nav class="flex flex-wrap gap-1 sm:gap-2">
+   <a class="navlink " href="index.html">Beranda</a>
+   <a class="navlink " href="materi.html">Materi</a>
+   <a class="navlink " href="simulasi.html">Simulasi</a>
+   <a class="navlink " href="game.html">Game</a>
+   <a class="navlink active" href="kuis.html">Kuis</a>
+  </nav>
+ </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+
+<section><span class="pill">Halaman 5 · Evaluasi</span><h1 class="text-4xl font-extrabold text-purple-800 mt-3">Kuis Teknologi Air</h1><p class="mt-3 text-purple-900/70">Jawab 10 pertanyaan. Setiap jawaban benar bernilai 10 poin. Pilih satu jawaban untuk setiap soal.</p></section>
+<section class="panel p-5 sm:p-7 mt-7">
+ <div class="flex items-center justify-between gap-3"><b id="progressText">Soal 1 dari 10</b><span class="pill" id="progressPercent">10%</span></div>
+ <div class="h-2 rounded-full bg-purple-100 mt-3 overflow-hidden"><div id="progressBar" class="h-full bg-purple-500" style="width:10%"></div></div>
+ <div id="quizArea" class="mt-6"></div>
+ <div class="flex justify-between gap-3 mt-6"><button id="prevQ" class="btn btn-soft">Sebelumnya</button><button id="nextQ" class="btn">Berikutnya</button></div>
+ <div id="quizResult" class="hidden mt-6 bg-purple-50 rounded-2xl p-5"></div>
+</section>
+<script>
+const questions=[
+{q:'Apa tujuan utama proses penyaringan air sederhana?',o:['Mengurangi partikel dan kotoran tertentu','Mengubah air menjadi air mineral','Menghilangkan semua virus secara otomatis','Menaikkan suhu air'],a:0,e:'Filter sederhana menahan sebagian partikel. Filter ini tidak menjamin air bebas mikroorganisme atau zat terlarut.'},
+{q:'Media apa yang membantu menahan partikel halus penyebab kekeruhan?',o:['Pasir','Pipa PVC','Tangki plastik','Talang air'],a:0,e:'Pasir menjadi media penyaring partikel halus dalam sistem filter sederhana.'},
+{q:'Arang aktif bekerja terutama melalui proses apa?',o:['Penguapan','Adsorpsi','Pembekuan','Pengendapan saja'],a:1,e:'Permukaan berpori arang aktif mengadsorpsi sebagian senyawa penyebab bau, warna, atau rasa.'},
+{q:'Komponen yang menangkap air hujan dari permukaan atap adalah ...',o:['Tangki','Talang','Pompa','Keran'],a:1,e:'Talang mengumpulkan aliran air dari atap dan mengarahkannya ke pipa.'},
+{q:'Atap seluas 50 m² menerima hujan 40 mm. Efisiensi pengumpulan 75%. Berapa perkiraan volume air?',o:['750 liter','1.000 liter','1.500 liter','2.000 liter'],a:2,e:'40 × 50 × 0,75 = 1.500 liter.'},
+{q:'Apa fungsi first flush pada sistem pemanenan air hujan?',o:['Membuang aliran awal yang membawa banyak kotoran','Menambah tekanan air','Memanaskan air hujan','Mengukur tinggi tangki'],a:0,e:'First flush mengalihkan aliran awal yang berpotensi membawa debu dan kotoran dari atap.'},
+{q:'Mengapa tangki penyimpanan air hujan sebaiknya tertutup?',o:['Agar air cepat menguap','Untuk mengurangi masuknya debu, hewan, dan nyamuk','Agar warna air berubah','Supaya air menjadi steril'],a:1,e:'Penutup membantu mencegah kontaminan dan nyamuk masuk ke dalam tangki.'},
+{q:'Pilih semua penggunaan air hujan tertampung yang sesuai setelah sistem dikelola dengan baik.',multi:true,o:['Menyiram tanaman','Membersihkan halaman','Mengisi air minum tanpa pengolahan dan pengujian','Mencuci kendaraan'],a:[0,1,3],e:'Air hujan tertampung dapat digunakan untuk beberapa kebutuhan nonminum. Air minum memerlukan pengolahan dan pengujian yang sesuai.'},
+{q:'Pernyataan: Air yang terlihat jernih setelah melewati filter sederhana pasti aman untuk diminum.',tf:true,a:false,e:'Kejernihan tidak membuktikan air bebas bakteri, virus, atau zat kimia berbahaya.'},
+{q:'Pernyataan: Sistem pemanenan air hujan dapat membantu mengurangi penggunaan air bersih untuk menyiram tanaman.',tf:true,a:true,e:'Air hujan yang ditampung dan dikelola dengan baik dapat digunakan untuk penyiraman.'}
+];
+let index=0,answers=Array(questions.length).fill(null);
+const area=document.getElementById('quizArea');
+function render(){let q=questions[index];document.getElementById('progressText').textContent='Soal '+(index+1)+' dari '+questions.length;document.getElementById('progressPercent').textContent=Math.round((index+1)/questions.length*100)+'%';document.getElementById('progressBar').style.width=((index+1)/questions.length*100)+'%';let type=q.tf?'Pilih Benar atau Salah':q.multi?'Pilih semua jawaban yang tepat':'Pilih satu jawaban';area.innerHTML='<div class="pill">'+type+'</div><h2 class="text-xl sm:text-2xl font-extrabold mt-3">'+q.q+'</h2>';let box=document.createElement('div');box.className='grid gap-3 mt-5';q.o.forEach((v,i)=>{let b=document.createElement('button');b.className='text-left border-2 rounded-xl p-4 '+(Array.isArray(answers[index])?answers[index].includes(i):answers[index]===i?'border-purple-500 bg-purple-50':'border-purple-100 bg-white');b.textContent=(q.tf?(i===0?'Benar. ':'Salah. '):String.fromCharCode(65+i)+'. ')+v;if(q.tf)b.textContent=i===0?'Benar':'Salah';b.onclick=()=>{if(q.tf)answers[index]=i===0;else if(q.multi){let arr=answers[index]||[];answers[index]=arr.includes(i)?arr.filter(x=>x!==i):[...arr,i]}else answers[index]=i;render()};if(q.multi&&answers[index]?.includes(i)||!q.multi&&!q.tf&&answers[index]===i||q.tf&&answers[index]===(i===0))b.className='text-left border-2 rounded-xl p-4 border-purple-500 bg-purple-50';box.appendChild(b)});area.appendChild(box);document.getElementById('prevQ').disabled=index===0;document.getElementById('prevQ').style.opacity=index===0?'.4':'1';document.getElementById('nextQ').textContent=index===questions.length-1?'Lihat hasil':'Berikutnya';}
+document.getElementById('prevQ').onclick=()=>{if(index>0){index--;render()}};document.getElementById('nextQ').onclick=()=>{if(index<questions.length-1){index++;render()}else finish()};
+function finish(){let score=0;questions.forEach((q,i)=>{let ans=answers[i],ok=q.multi?Array.isArray(ans)&&ans.length===q.a.length&&q.a.every(x=>ans.includes(x)):ans===q.a;if(ok)score+=10});area.classList.add('hidden');document.getElementById('prevQ').classList.add('hidden');document.getElementById('nextQ').classList.add('hidden');let r=document.getElementById('quizResult');r.classList.remove('hidden');r.innerHTML='<div class="text-center"><div class="text-5xl">🏆</div><p class="text-sm font-bold text-purple-600 mt-3">HASIL KUIS KAMU</p><div class="text-5xl font-black text-purple-800 my-2">'+score+'/100</div><p class="font-bold">'+(score>=80?'Bagus! Kamu memahami materi dengan baik.':score>=60?'Cukup baik. Pelajari kembali bagian yang belum kamu kuasai.':'Ayo baca materi lagi dan coba kuis sekali lagi.')+'</p></div><div class="mt-5 space-y-3">'+questions.map((q,i)=>{let ans=answers[i],ok=q.multi?Array.isArray(ans)&&ans.length===q.a.length&&q.a.every(x=>ans.includes(x)):ans===q.a;return '<div class="bg-white rounded-xl p-3 text-sm"><b>'+(i+1)+'. '+(ok?'✓ Benar':'✗ Perlu dipelajari')+'</b><p class="mt-1">'+q.e+'</p></div>'}).join('')+'</div><button onclick="location.reload()" class="btn mt-5 w-full">Ulangi kuis</button>'}
+render();
+</script>
+</main>
+<footer class="mt-10 border-t border-purple-100 bg-white">
+ <div class="max-w-6xl mx-auto px-4 py-6 text-center text-sm text-purple-500">
+  Penyaringan dan Pemanfaatan Air Hujan · Kenali Teknologi Air, Jaga Masa Depan
+ </div>
+</footer>
+</body></html>

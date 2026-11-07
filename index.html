@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f5efff">
+<title>Beranda | Penyaringan dan Pemanfaatan Air Hujan</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {theme:{extend:{fontFamily:{display:['Trebuchet MS','sans-serif'],body:['Nunito','Arial','sans-serif']},colors:{lilac:'#a78bfa',plum:'#6d28d9',lavender:'#ede9fe',ink:'#34264d',mint:'#d9f5ec'}}}};
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:Nunito,Arial,sans-serif;background:#fbf9ff;color:#34264d}
+h1,h2,h3,.brand{font-family:Quicksand,Trebuchet MS,sans-serif}
+.panel{background:white;border:1px solid #eee7fb;border-radius:22px;box-shadow:0 8px 28px rgba(109,40,217,.07)}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:14px;padding:11px 17px;font-weight:800;background:#7c3aed;color:white;transition:.2s}
+.btn:hover{background:#6d28d9;transform:translateY(-1px)}
+.btn-soft{background:#ede9fe;color:#5b21b6}
+.btn-soft:hover{background:#ddd6fe}
+.navlink{padding:9px 12px;border-radius:12px;font-weight:800;color:#6b5a83}
+.navlink.active,.navlink:hover{background:#ede9fe;color:#5b21b6}
+.pill{display:inline-block;border-radius:999px;background:#f1eafe;color:#6d28d9;padding:5px 11px;font-size:12px;font-weight:800}
+.diagram{background:linear-gradient(135deg,#f4efff,#e8f8f4);border-radius:18px;padding:18px}
+.step{border:2px solid #e9ddff;border-radius:14px;padding:12px;text-align:center;background:white}
+input,select{accent-color:#7c3aed}
+@media(max-width:640px){.navlink{font-size:12px;padding:8px 7px}}
+</style>
+</head>
+<body>
+<header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-purple-100">
+ <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-3">
+  <div class="flex items-center justify-between">
+   <a href="index.html" class="brand text-xl sm:text-2xl font-extrabold text-purple-700">💧 Penyaringan dan Pemanfaatan Air Hujan</a>
+   <span class="pill">Belajar teknologi air</span>
+  </div>
+  <nav class="flex flex-wrap gap-1 sm:gap-2">
+   <a class="navlink active" href="index.html">Beranda</a>
+   <a class="navlink " href="materi.html">Materi</a>
+   <a class="navlink " href="simulasi.html">Simulasi</a>
+   <a class="navlink " href="game.html">Game</a>
+   <a class="navlink " href="kuis.html">Kuis</a>
+  </nav>
+ </div>
+</header>
+<main class="max-w-6xl mx-auto px-4 py-8">
+
+<section class="grid lg:grid-cols-2 gap-8 items-center">
+ <div>
+  <span class="pill">Website pembelajaran interaktif · SMP / SMA</span>
+  <h1 class="text-4xl sm:text-6xl font-extrabold text-purple-800 leading-tight mt-4">Air Bersih Dimulai dari Pengetahuan.</h1>
+  <p class="text-lg text-purple-900/70 mt-5 leading-relaxed">Pelajari cara menyaring air dan memanen air hujan. Coba simulasi, selesaikan tantangan, lalu ukur pemahamanmu lewat kuis.</p>
+  <div class="flex flex-wrap gap-3 mt-6"><a class="btn" href="materi.html">Mulai belajar</a><a class="btn btn-soft" href="simulasi.html">Coba simulasi</a></div>
+  <div class="grid grid-cols-3 gap-3 mt-8">
+   <div class="panel p-3 text-center"><div class="text-2xl">🧪</div><b class="text-sm">2 simulasi</b></div>
+   <div class="panel p-3 text-center"><div class="text-2xl">🎮</div><b class="text-sm">3 permainan</b></div>
+   <div class="panel p-3 text-center"><div class="text-2xl">📝</div><b class="text-sm">10 soal kuis</b></div>
+  </div>
+ </div>
+ <div class="diagram">
+  <svg viewBox="0 0 520 360" role="img" aria-label="Ilustrasi rumah mengumpulkan air hujan dan tetesan air" class="w-full">
+   <circle cx="420" cy="65" r="38" fill="#f8d879"/><path d="M75 185 L250 55 L425 185" fill="#b79bea" stroke="#7650b8" stroke-width="8" stroke-linejoin="round"/>
+   <rect x="105" y="180" width="290" height="145" rx="12" fill="#fff" stroke="#9b83c8" stroke-width="5"/>
+   <rect x="220" y="235" width="65" height="90" rx="7" fill="#c8b5ec"/><rect x="135" y="210" width="55" height="48" rx="5" fill="#bde8e3"/><rect x="315" y="210" width="55" height="48" rx="5" fill="#bde8e3"/>
+   <path d="M420 180 V265 H455" stroke="#5a9d9a" stroke-width="9" fill="none"/><rect x="430" y="265" width="70" height="60" rx="12" fill="#8ed1cb" stroke="#478f89" stroke-width="4"/>
+   <path d="M65 100 C45 125 45 140 65 150 C85 140 85 125 65 100" fill="#72b9e9"/><path d="M455 110 C435 135 435 150 455 160 C475 150 475 135 455 110" fill="#72b9e9"/>
+   <text x="260" y="350" text-anchor="middle" fill="#6846a3" font-size="16" font-weight="bold">Rumah dengan sistem penampungan air hujan</text>
+  </svg>
+ </div>
+</section>
+<section class="mt-12">
+ <h2 class="text-2xl sm:text-3xl font-extrabold text-purple-800">Apa yang akan kamu pelajari?</h2>
+ <div class="grid md:grid-cols-2 gap-5 mt-5">
+  <article class="panel p-5"><div class="text-4xl">🫧</div><h3 class="text-xl font-extrabold mt-3">Water Filter</h3><p class="mt-2 text-purple-900/70">Kenali proses penyaringan sederhana. Pelajari fungsi kerikil, pasir, arang aktif, dan kapas.</p><a class="text-purple-700 font-extrabold inline-block mt-4" href="materi.html#filter">Pelajari materi →</a></article>
+  <article class="panel p-5"><div class="text-4xl">🌧️</div><h3 class="text-xl font-extrabold mt-3">Rainwater Harvesting</h3><p class="mt-2 text-purple-900/70">Pelajari cara mengumpulkan air hujan dari atap, menyaringnya, lalu menyimpannya di tangki.</p><a class="text-purple-700 font-extrabold inline-block mt-4" href="materi.html#hujan">Pelajari materi →</a></article>
+ </div>
+</section>
+<section class="panel p-6 mt-10">
+ <h2 class="text-2xl font-extrabold text-purple-800">Profil Pengembang</h2>
+ <p class="text-purple-900/70 mt-2">Website ini dikembangkan sebagai media pembelajaran teknologi lingkungan tentang pengelolaan air bersih.</p>
+ <div class="grid sm:grid-cols-2 gap-4 mt-5">
+  <div class="bg-purple-50 rounded-2xl p-4"><div class="text-3xl">👩🏻‍💻</div><b>Nama Pengembang 1</b><p class="text-sm text-purple-700">Isi nama anggota kelompok.</p></div>
+  <div class="bg-purple-50 rounded-2xl p-4"><div class="text-3xl">👩🏻‍💻</div><b>Nama Pengembang 2</b><p class="text-sm text-purple-700">Isi nama anggota kelompok.</p></div>
+ </div>
+ <p class="text-xs text-purple-500 mt-4">Ganti nama, kelas, institusi, dan foto sesuai identitas kelompokmu.</p>
+</section>
+
+</main>
+<footer class="mt-10 border-t border-purple-100 bg-white">
+ <div class="max-w-6xl mx-auto px-4 py-6 text-center text-sm text-purple-500">
+  Penyaringan dan Pemanfaatan Air Hujan · Kenali Teknologi Air, Jaga Masa Depan
+ </div>
+</footer>
+</body></html>
